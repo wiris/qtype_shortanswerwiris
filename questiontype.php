@@ -20,11 +20,12 @@ require_once($CFG->dirroot . '/question/type/wq/questiontype.php');
 require_once($CFG->dirroot . '/question/type/shortanswer/questiontype.php');
 require_once($CFG->dirroot . '/question/type/wq/quizzes/quizzes.php');
 require_once($CFG->dirroot . '/question/type/shortanswerwiris/lib.php');
+require_once($CFG->dirroot . '/question/type/essay/questiontype.php');
 
 class qtype_shortanswerwiris extends qtype_wq {
 
     public function __construct() {
-        parent::__construct(new qtype_shortanswer());
+        parent::__construct(new qtype_shortanswer(), new qtype_essay());
     }
     
     public function extra_question_fields() {

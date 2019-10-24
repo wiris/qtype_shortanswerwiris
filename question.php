@@ -31,8 +31,8 @@ class qtype_shortanswerwiris_question extends qtype_wq_question
      */
     public $answers;
 
-    public function __construct(question_definition $base = null) {
-        parent::__construct($base);
+    public function __construct(question_definition $base = null, qtype_essay_question $auxiliar = null) {
+        parent::__construct($base, $auxiliar);
         $this->step = new qtype_wirisstep();
     }
     public function start_attempt(question_attempt_step $step, $variant) {
